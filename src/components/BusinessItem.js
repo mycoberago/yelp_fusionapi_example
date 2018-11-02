@@ -42,11 +42,7 @@ const BusinessItem = ({props,info,selected=false}) => {
 		        	: null 
 				}
 				
-				<Card style={{
-				width: '70vw',
-				alignSelf: 'center',
-				border: '1px solid lightgrey'
-				}}>
+				<Card style={styles.card}>
 
 				<CardHeader
 		          avatar={
@@ -56,7 +52,8 @@ const BusinessItem = ({props,info,selected=false}) => {
 		          }
 		          title={info.name}
 		          style={{
-		          	marginTop: '5vw'
+		          	marginTop: '1vw',
+		          	fontSize: '2vw'
 		          }}
 		        />
 
@@ -72,18 +69,18 @@ const BusinessItem = ({props,info,selected=false}) => {
 		        	selected ?
 
 		        	<CardContent>
-		        		<Typography paragraph>
+		        		<Typography >
 		        			Address: { info.location.address1 + ' ' + info.location.city + ', ' + info.location.state + ' ' + info.location.zip_code }
 		        		</Typography>
 
-		        		<Typography paragraph>
+		        		<Typography >
 		        			Phone: {info.display_phone}
 		        		</Typography>
 
-		        		<Typography paragraph>
+		        		<Typography >
 		        			Rating: {info.rating}
 		        		</Typography>
-		        		<Typography paragraph>
+		        		<Typography >
 		        			{info.price || null }
 		        		</Typography>
 		        	</CardContent>
@@ -124,6 +121,11 @@ const styles = {
 		flexDirection: 'column',
 		justifyContent: 'center',
 		marginTop: '5vw'
+	},
+	card: {
+		width: '70vw',
+		alignSelf: 'center',
+		border: '1px solid lightgrey'
 	},
 	header: {
 		display: 'flex',

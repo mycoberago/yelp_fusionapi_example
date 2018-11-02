@@ -37,7 +37,11 @@ export default class SearchComponent extends Component {
 		            required
 		          />
 
-		          <Button onClick={handleSubmit} variant="contained" color="primary">
+		          <Button onClick={handleSubmit} 
+		          		  variant="contained" 
+		          		  color="primary"
+		          		  style={styles.button}
+		          >
 		          Search
 		        </Button>
 		        </div>
@@ -62,7 +66,6 @@ export default class SearchComponent extends Component {
 
 const styles = {
   mainContainer: {
-    paddingTop: '10vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center'
@@ -72,13 +75,12 @@ const styles = {
     justifyContent: 'center',
     flexDirection: 'column',
     alignSelf: 'center',
-    // border: '1px solid black',
     height: '15vh',
     width: '35vh'
   },
   input: {
     fontSize: '3vw',
-    width: '50vw',
+    width: '30vw',
     alignSelf: 'center',
     textAlign: 'center',
     borderRadius: '1vw',
@@ -86,10 +88,8 @@ const styles = {
     marginBottom: '3vw'
   },
   button: {
-    fontSize: '2vw',
-    width: '10vw',
-    height: '5vw',
-    borderRadius: '.5vw',
-    boxShadow: '.5vw .5vw 1vw'
+  	fontSize: '1vw',
+    width: '30vw',
+    alignSelf: 'center'
   }
 }
